@@ -19,12 +19,12 @@ Ext.define('SenchaApp.view.Main', {
                 items: {
                     docked: 'top',
                     xtype: 'titlebar',
-                    title: 'Welcome to Sencha Touch 2'
+                    title: 'Sencha Touch by Prince'
                 },
 
                 html: [
-                    "You've just generated a new Sencha Touch 2 project. What you're looking at right now is the ",
-                    "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
+                    "First Sencha Touch App By Yuvraj Patil <br><br>",
+                    "Edit contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
                     "and refresh to change what's rendered here."
                 ].join("")
             },
@@ -36,7 +36,7 @@ Ext.define('SenchaApp.view.Main', {
                     {
                         docked: 'top',
                         xtype: 'titlebar',
-                        title: 'Getting Started'
+                        title: 'Video Tab'
                     },
                     {
                         xtype: 'video',
