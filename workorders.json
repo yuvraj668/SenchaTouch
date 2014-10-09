@@ -1,0 +1,20 @@
+[
+    {
+        "id": "14",
+        "lastName": "Franklin",
+        "latitude": "52.370216",
+        "longitude": "4.895168"
+    },
+    {
+        "id": "2",
+        "lastName": "Johnson",
+        "latitude": "52.370316",
+        "longitude": "4.895868"
+    },
+    {
+        "id": "8",
+        "lastName": "Vanderburg",
+        "latitude": "52.370516",
+        "longitude": "4.895968"
+    }
+]

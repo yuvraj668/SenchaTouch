@@ -1,50 +1,55 @@
-Ext.define('SenchaApp.view.Main', {
-    extend: 'Ext.tab.Panel',
-    xtype: 'main',
+Ext.define('AddressBook.view.Main', {
+    extend: 'Ext.navigation.View',
+    xtype: 'mainview',
+
     requires: [
-        'Ext.TitleBar',
-        'Ext.Video'
+        'AddressBook.view.Login',
+        'AddressBook.view.workorder.Map',
+        'AddressBook.view.workorder.Edit'
     ],
+
     config: {
-        tabBarPosition: 'bottom',
+        autoDestroy: false,
+
+        navigationBar: {
+            ui: 'sencha',
+            items: [
+                {
+                    xtype: 'button',
+                    id: 'editButton',
+                    text: 'Edit',
+                    align: 'right',
+                    hidden: true,
+                    hideAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeOut',
+                        duration: 200
+                    },
+                    showAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeIn',
+                        duration: 200
+                    }
+                },
+                {
+                    xtype: 'button',
+                    id: 'saveButton',
+                    text: 'Save',
+                    ui: 'sencha',
+                    align: 'right',
+                    hidden: true,
+                    hideAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeOut',
+                        duration: 200
+                    },
+                    showAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeIn',
+                        duration: 200
+                    }
+                }
+            ]
+        },
 
         items: [
-            {
-                title: 'Welcome',
-                iconCls: 'home',
-
-                styleHtmlContent: true,
-                scrollable: true,
-
-                items: {
-                    docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Sencha Touch by Prince'
-                },
-
-                html: [
-                    "First Sencha Touch App By Yuvraj Patil <br><br>",
-                    "Edit contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
-                    "and refresh to change what's rendered here."
-                ].join("")
-            },
-            {
-                title: 'Get Started',
-                iconCls: 'action',
-
-                items: [
-                    {
-                        docked: 'top',
-                        xtype: 'titlebar',
-                        title: 'Video Tab'
-                    },
-                    {
-                        xtype: 'video',
-                        url: 'http://av.vimeo.com/64284/137/87347327.mp4?token=1330978144_f9b698fea38cd408d52a2393240c896c',
-                        posterUrl: 'http://b.vimeocdn.com/ts/261/062/261062119_640.jpg'
-                    }
-                ]
-            }
+            { xtype: 'loginForm' }
         ]
     }
 });
