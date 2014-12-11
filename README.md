@@ -13,8 +13,8 @@ A. What is Sencha Touch ?
 <strong>
 B. Install Required Set-ups
 </strong>
-1. Java
-2. Ruby
-3. Secha CMD
-4. Sencha Touch (Zip)
+- Java
+- Ruby
+- Secha CMD
+- Sencha Touch (Zip)
 
